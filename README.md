@@ -15,4 +15,4 @@ After you clone/download this repo, install python requirements
 `$ pip install -r requirements.txt`
 
 
-Rename `.env.example` file to `.env`
+Rename `.env.example` file to `.env` and modify it with the correct info (Your password and MSISDN; Landline number)
