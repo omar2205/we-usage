@@ -12,12 +12,7 @@ Monitor your WE internet usage.
 
 After you clone/download this repo, install python requirements
 
-
-#### Windows
-
 `$ pip install -r requirements.txt`
 
-#### Linux & macOS
 
-`$ pip install -r requirements.txt`
-
+Rename `.env.example` file to `.env`
