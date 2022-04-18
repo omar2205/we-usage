@@ -59,3 +59,10 @@ class User:
     res_json = res.json()
     detailed_usage = res_json['body']['detailedLineUsageList']
     return detailed_usage
+
+  def print_report(self):
+    if not self.jwt:
+      self.login()
+    usage = self.get_usage()
+    for i in range(len(usage)):
+      print(f'''{usage[i]['usedAmount']}/{usage[i]['initialTotalAmount']}{usage[i]['measureUnitEnName']}\t{usage[i]['itemCode']}''')

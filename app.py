@@ -11,4 +11,10 @@ if PW == 'NO_PW':
   print('Make sure that your password is correct')
   exit(1)
 
-u = User(PW, MSISDN)
+def main():
+  u = User(PW, MSISDN)
+  u.print_report()
+
+if __name__ == '__main__':
+  main()
+
