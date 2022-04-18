@@ -66,3 +66,18 @@ class User:
     usage = self.get_usage()
     for i in range(len(usage)):
       print(f'''{usage[i]['usedAmount']}/{usage[i]['initialTotalAmount']}{usage[i]['measureUnitEnName']}\t{usage[i]['itemCode']}''')
+
+  def get_full_usage(self):
+    '''
+    get full usage (calcaulate all available packages)
+    return total_amount, total_used
+    '''
+    if not self.jwt:
+      self.login()
+    usage = self.get_usage()
+    total_amount = 0
+    total_used = 0
+    for i in range(len(usage)):
+      total_amount = total_amount + usage[i]['initialTotalAmount']
+      total_used = total_used + usage[i]['usedAmount']
+    return total_amount, total_used

@@ -14,6 +14,8 @@ if PW == 'NO_PW':
 def main():
   u = User(PW, MSISDN)
   u.print_report()
+  amount, used = u.get_full_usage()
+  print(f'{used}/{amount}')
 
 if __name__ == '__main__':
   main()
