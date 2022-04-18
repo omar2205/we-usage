@@ -16,3 +16,9 @@ After you clone/download this repo, install python requirements
 
 
 Rename `.env.example` file to `.env` and modify it with the correct info (Your password and MSISDN; Landline number)
+
+
+## TODO
+
+- [ ] Add saving the usage to a database every hour
+- [ ] Add a server to respond with the usage
