@@ -80,4 +80,4 @@ class User:
     for i in range(len(usage)):
       total_amount = total_amount + usage[i]['initialTotalAmount']
       total_used = total_used + usage[i]['usedAmount']
-    return total_amount, total_used
+    return round(total_amount, 2), round(total_used, 2)
