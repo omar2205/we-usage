@@ -1,7 +1,8 @@
-#!/usr/bin/python3.9
+#!/usr/bin/python3
 from dotenv import load_dotenv
 load_dotenv() # load from .env file
 import os
+import sys
 from utils import encrypt_pw
 from user import User
 
@@ -14,6 +15,12 @@ if PW == 'NO_PW':
 
 def main():
   u = User(PW, MSISDN)
+  try:
+    if sys.argv[1] == 'report':
+      u.print_report()
+      return
+  except:
+    pass
 #  u.print_report()
   amount, used = u.get_full_usage()
   print(f'{used}/{amount}')
