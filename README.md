@@ -7,6 +7,9 @@ Monitor your WE internet usage.
 > You need Python3
 
 1. `git clone https://github.com/omar2205/we-usage`
+
+**OR**
+
 2. [Download as a ZIP file](https://github.com/omar2205/we-usage/archive/refs/heads/master.zip "Download as a ZIP file")
 
 
